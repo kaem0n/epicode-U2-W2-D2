@@ -99,15 +99,21 @@
         </div>
       </section>
       <section class="container">
-        <div class="row justify-content-center g-2 g-md-3 gx-lg-5 mb-5">
+        <div class="row mb-3">
           <div class="col-12 px-0 d-flex justify-content-between">
-            <h3 id="saldi">Saldi</h3>
+            <h3>Saldi</h3>
             <a
+              id="saldi"
               href="#"
               class="text-info link-underline link-underline-opacity-0"
               >Nascondi sezione</a
             >
           </div>
+        </div>
+        <div
+          id="saldi-container"
+          class="row justify-content-center g-2 g-md-3 gx-lg-5 mb-5"
+        >
           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card border-2 border-info">
               <img
@@ -186,15 +192,18 @@
           </div>
         </div>
 
-        <div class="row justify-content-center g-3 mb-5">
+        <div class="row mb-3">
           <div class="col-12 px-0 d-flex justify-content-between">
-            <h3 id="welcome-summer">Welcome Summer</h3>
+            <h3>Welcome Summer</h3>
             <a
+              id="welcome-summer"
               href="#"
               class="text-info link-underline link-underline-opacity-0"
               >Nascondi sezione</a
             >
           </div>
+        </div>
+        <div id="welcome-container" class="row justify-content-center g-3 mb-5">
           <div class="col-12 col-sm-6 col-lg-4">
             <div class="card shadow-lg position-relative">
               <div
@@ -510,6 +519,18 @@
       const currentYear = new Date().getFullYear();
       const footerSpan = document.getElementById("year");
       footerSpan.innerText = currentYear;
+
+      const saldi = document.getElementById("saldi-container");
+      const saldiAnchor = document.getElementById("saldi");
+      const welcomeSummer = document.getElementById("welcome-container");
+      const welcomeAnchor = document.getElementById("welcome-summer");
+
+      saldiAnchor.addEventListener("click", function () {
+        saldi.classList.toggle("d-none");
+      });
+      welcomeAnchor.addEventListener("click", function () {
+        welcomeSummer.classList.toggle("d-none");
+      });
     </script>
   </body>
 </html>
