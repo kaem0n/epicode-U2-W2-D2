@@ -503,9 +503,70 @@
       </section>
     </main>
     <footer class="bg-dark text-white text-center py-5">
-      <button type="button" class="btn btn-outline-secondary mb-4">
+      <button
+        type="button"
+        class="btn btn-outline-secondary mb-4"
+        data-bs-toggle="modal"
+        data-bs-target="#sendEmail"
+      >
         Contattaci
       </button>
+
+      <div
+        class="modal fade"
+        id="sendEmail"
+        tabindex="-1"
+        aria-labelledby="sendEmailLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg text-start text-black">
+          <div class="modal-content">
+            <form>
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="sendEmailLabel">
+                  Scrivi un messaggio
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="email-address" class="form-label"
+                    >Indirizzo e-mail</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email-address"
+                    aria-describedby="emailHelp"
+                    required
+                  />
+                </div>
+                <textarea
+                  class="form-control"
+                  placeholder="Scrivi qui il tuo messaggio"
+                  required
+                ></textarea>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Chiudi
+                </button>
+                <button type="submit" class="btn btn-info">Invia</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
       <p>
         &copy; <span id="year"></span> Kalina Travel LTD. All Rights Reserved.
       </p>
